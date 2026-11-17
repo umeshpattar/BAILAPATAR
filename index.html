@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Bailapatar Community - Preserving heritage, strengthening unity and promoting education.">
+<meta name="theme-color" content="#102b49">
+
+<title>Bailapatar Community | Official Website</title>
+
+<style>
+:root {
+  --navy: #102b49;
+  --navy2: #193c60;
+  --gold: #e7c982;
+  --white: #ffffff;
+  --light: #f3f6fa;
+  --text: #243449;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+  background: var(--navy);
+  color: white;
+  padding: 17px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid var(--gold);
+}
+
+.header-inner {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+/* HERO */
+
+.hero {
+  background: var(--navy);
+  color: white;
+  padding: 75px 7%;
+  margin: 30px auto;
+  width: 94%;
+  max-width: 1400px;
+  border-radius: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 6vw, 65px);
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+.hero h2 {
+  color: var(--gold);
+  font-size: clamp(22px, 4vw, 38px);
+  margin-bottom: 22px;
+}
+
+.hero p {
+  font-size: clamp(17px, 2.5vw, 25px);
+  margin-bottom: 25px;
+}
+
+.hero .kannada {
+  border-top: 2px solid #71869c;
+  padding-top: 30px;
+  font-size: clamp(18px, 3vw, 30px);
+}
+
+/* BUTTON */
+
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 7px;
+  margin-top: 10px;
+}
+
+/* SECTIONS */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 35px 5%;
+}
+
+.section-title {
+  color: var(--navy);
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+/* CARDS */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #dce4ed;
+  box-shadow: 0 5px 18px rgba(16,43,73,0.06);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.card h3 {
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #596779;
+}
+
+.card a {
+  color: var(--navy);
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+/* FEATURE SECTIONS */
+
+.feature {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  border-left: 5px solid var(--gold);
+  margin-top: 20px;
+}
+
+.notice {
+  background: #fff8e7;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ead9ac;
+  margin-top: 15px;
+}
+
+/* GALLERY */
+
+.gallery-box {
+  background: #e5ebf2;
+  border: 1px dashed #9baec2;
+  padding: 35px 15px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--navy);
+  color: white;
+  padding: 40px 5%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer h2 {
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+footer a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+footer p {
+  margin: 8px;
+}
+
+/* MOBILE */
+
+@media(max-width: 700px) {
+  .header-inner {
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 40px 7%;
+  }
+
+  .hero h1 {
+    font-size: 37px;
+  }
+
+  .container {
+    padding: 25px 5%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+<div class="header-inner">
+
+<div class="logo">BAILAPATAR</div>
+
+<nav aria-label="Main navigation">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#history">History</a>
+<a href="#culture">Culture</a>
+<a href="#sangh">Sangh</a>
+<a href="#government">Government</a>
+<a href="#education">Education</a>
+<a href="#membership">Membership</a>
+<a href="#news">News</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+</header>
+
+<!-- HOME -->
+
+<main>
+
+<section class="hero" id="home">
+
+<h1>Welcome to Bailapatar Community</h1>
+
+<h2>ಬೈಲಪಾಟರ್ ಸಮುದಾಯಕ್ಕೆ ಸ್ವಾಗತ</h2>
+
+<p>
+A platform dedicated to preserving our heritage,
+strengthening unity, promoting education and
+empowering our community.
+</p>
+
+<div class="kannada">
+ನಮ್ಮ ಪರಂಪರೆಯನ್ನು ಉಳಿಸಿ, ಐಕ್ಯತೆಯನ್ನು ಬೆಳೆಸಿಸಿ,
+ಶಿಕ್ಷಣವನ್ನು ಉತ್ತೇಜಿಸಿ ಮತ್ತು ಸಮುದಾಯದ
+ಸರ್ವತೋಮುಖ ಅಭಿವೃದ್ಧಿಗೆ ಶ್ರಮಿಸುವ ವೇದಿಕೆ.
+</div>
+
+<a href="#about" class="btn">Explore Community</a>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="container" id="about">
+
+<h2 class="section-title">About Us / ನಮ್ಮ ಬಗ್ಗೆ</h2>
+
+<p class="section-subtitle">
+Know about our community, identity and objectives.
+</p>
+
+<div class="feature">
+<h3>Who We Are</h3>
+<p>
+Bailapatar Community is a platform designed to
+preserve community heritage, share useful information,
+support education and encourage unity.
+</p>
+</div>
+
+</section>
+
+<!-- HISTORY -->
+
+<section class="container" id="history">
+
+<h2 class="section-title">History & Heritage</h2>
+
+<p class="section-subtitle">ಇತಿಹಾಸ ಮತ್ತು ಪರಂಪರೆ</p>
+
+<div class="feature">
+<h3>Our History</h3>
+<p>
+This section will present the documented history,
+heritage, important milestones and historical
+information of the community.
+</p>
+</div>
+
+</section>
+
+<!-- CULTURE -->
+
+<section class="container" id="culture">
+
+<h2 class="section-title">Culture & Traditions</h2>
+
+<p class="section-subtitle">ಸಂಸ್ಕೃತಿ ಮತ್ತು ಸಂಪ್ರದಾಯ</p>
+
+<div class="grid">
+<div class="card">
+<h3>Traditions</h3>
+<p>Community traditions and customs.</p>
+</div>
+
+<div class="card">
+<h3>Festivals</h3>
+<p>Important festivals and celebrations.</p>
+</div>
+
+<div class="card">
+<h3>Heritage</h3>
+<p>Preserving cultural heritage.</p>
+</div>
+</div>
+
+</section>
+
+<!-- SANGH -->
+
+<section class="container" id="sangh">
+
+<h2 class="section-title">The Sangh / ಸಂಘದ ಬಗ್ಗೆ</h2>
+
+<div class="feature">
+<h3>Community Organization</h3>
+<p>
+Information about the organization, its objectives,
+leadership and activities will be published here
+after verification.
+</p>
+</div>
+
+</section>
+
+<!-- GOVERNMENT ORDERS -->
+
+<section class="container" id="government">
+
+<h2 class="section-title">Government Orders</h2>
+
+<p class="section-subtitle">ಸರ್ಕಾರದ ಆದೇಶಗಳು</p>
+
+<div class="feature">
+<h3>Official Documents</h3>
+<p>
+Verified government notifications, official orders
+and relevant public documents.
+</p>
+<p>Documents will be added after source verification.</p>
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section class="container" id="education">
+
+<h2 class="section-title">Education & Welfare</h2>
+
+<p class="section-subtitle">ಶಿಕ್ಷಣ ಮತ್ತು ಕಲ್ಯಾಣ</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Education</h3>
+<p>Educational information and student resources.</p>
+</div>
+
+<div class="card">
+<h3>Scholarships</h3>
+<p>Scholarship information and opportunities.</p>
+</div>
+
+<div class="card">
+<h3>Welfare</h3>
+<p>Community welfare initiatives.</p>
+</div>
+
+<div class="card">
+<h3>Career</h3>
+<p>Career guidance and job information.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- MEMBERSHIP -->
+
+<section class="container" id="membership">
+
+<h2 class="section-title">Member Registration</h2>
+
+<p class="section-subtitle">ಸದಸ್ಯತ್ವ ನೋಂದಣಿ</p>
+
+<div class="feature">
+<h3>Community Membership</h3>
+
+<p>
+Membership applications will be available through
+a secure registration system.
+</p>
+
+<div class="notice">
+<strong>Verification Notice</strong>
+<p>
+Membership certificates will be issued only after
+authorized verification and administrator approval.
+Registration alone does not prove membership.
+</p>
+</div>
+
+<p>
+Registration service will be activated after
+secure backend integration.
+</p>
+
+</div>
+
+</section>
+
+<!-- NEWS -->
+
+<section class="container" id="news">
+
+<h2 class="section-title">News & Events</h2>
+
+<p class="section-subtitle">ಸುದ್ದಿ ಮತ್ತು ಕಾರ್ಯಕ್ರಮಗಳು</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Community News</h3>
+<p>Verified community announcements.</p>
+</div>
+
+<div class="card">
+<h3>Upcoming Events</h3>
+<p>Information about upcoming programs.</p>
+</div>
+
+<div class="card">
+<h3>Announcements</h3>
+<p>Important public announcements.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="container" id="gallery">
+
+<h2 class="section-title">Gallery / ಚಿತ್ರಸಂಪುಟ</h2>
+
+<div class="gallery-box">
+<h3>Community Photo Gallery</h3>
+<p>Photos and videos will be added here.</p>
+</div>
+
+</section>
+
+<!-- DATABASE -->
+
+<section class="container" id="database">
+
+<h2 class="section-title">Members Database</h2>
+
+<p class="section-subtitle">
+ಸದಸ್ಯರ ನೋಂದಣಿ, ಜಿಲ್ಲಾವಾರು ಮತ್ತು ತಾಲೂಕುವಾರು ಮಾಹಿತಿ.
+</p>
+
+<div class="feature">
+<h3>Member Information System</h3>
+<p>
+A private and authorized member information
+system will be developed.
+</p>
+<p>
+Personal information will not be displayed publicly.
+</p>
+</div>
+
+</section>
+
+<!-- POPULATION SURVEY -->
+
+<section class="container" id="survey">
+
+<h2 class="section-title">Community Population Survey</h2>
+
+<p class="section-subtitle">
+ಸಮುದಾಯದ ಅಂದಾಜು ಜನಸಂಖ್ಯೆ ಮತ್ತು ಕುಟುಂಬಗಳ ಅಂಕಿಅಂಶ.
+</p>
+
+<div class="feature">
+<h3>Community Statistics</h3>
+<p>
+Verified aggregate statistics will be displayed here.
+Individual family details will remain private.
+</p>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="container" id="contact">
+
+<h2 class="section-title">Contact Us / ಸಂಪರ್ಕಿಸಿ</h2>
+
+<div class="feature">
+<h3>Get in Touch</h3>
+
+<p>
+For official community information and website
+related enquiries, contact the authorized
+community administration.
+</p>
+
+<p>Email: Official contact details will be added.</p>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>BAILAPATAR COMMUNITY</h2>
+
+<p>Preserving Heritage | Strengthening Unity</p>
+
+<p>ಪರಂಪರೆ • ಐಕ್ಯತೆ • ಶಿಕ್ಷಣ • ಅಭಿವೃದ್ಧಿ</p>
+
+<p>
+© 2026 Bailapatar Community.
+All Rights Reserved.
+</p>
+
+<p>Community Information Platform</p>
+
+</footer>
+
+</body>
+</html>
