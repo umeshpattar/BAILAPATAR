@@ -1,0 +1,30 @@
+name: Website Security Check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  website-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Check Website File
+        run: |
+          test -f index.html
+          echo "Website file found!"
+
+      - name: Check README
+        run: |
+          test -f README.md
+          echo "README found!"
